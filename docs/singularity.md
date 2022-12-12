@@ -50,7 +50,7 @@ docker: Error response from daemon: error while creating mount source path '/hom
 SINGULARITYENV_POSTGRES_PASSWORD=local_password singularity instance start -B $HOME/postgresql/data:/var/lib/postgresql/data   postgres_container.sif   postgres  -p 5432
 ```
 
-## Entering singularity container with particular GPUs using docker swarm
+## Entering singularity container with particular GPUs using slurm
 
 ```sh
 srun --partition GPUMAX --gpus 3,4 --pty -n1 singularity shell --nv pytorch.sif bash
